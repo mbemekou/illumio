@@ -113,7 +113,7 @@ def start():
         if(args.object=="labels" and args.out!=None):
             json_lab=json.loads(ilo.get_labels())
             with open(args.out, "w") as f:
-                csv_file=csv.writer(f,delimiter=";")
+                csv_file=csv.writer(f,delimiter=",")
                 csv_file.writerow(["type","name"])
                 for element in json_lab:
                     csv_file.writerow([element["key"],element["value"]])
@@ -125,7 +125,7 @@ def start():
         if(args.object=="services" and args.out!=None):
             json_serv=json.loads(ilo.get_services())
             with open(args.out,"w") as f:
-                csv_file=csv.writer(f,delimiter=";")
+                csv_file=csv.writer(f,delimiter=",")
                 csv_file.writerow(["SERVICE","DESCRIPTION"])
                 for element in json_serv:
                     csv_file.writerow([element["name"],element["description"]])
@@ -149,7 +149,7 @@ def start():
         if(args.object=="draft_rulesets" and args.out!=None):
             json_rul=json.loads(ilo.get_draft_rulesets())
             with open(args.out,"w") as f:
-                csv_file=csv.writer(f,delimiter=";")
+                csv_file=csv.writer(f,delimiter=",")
                 csv_file.writerow(["RULENAME"])
                 for element in json_rul:
                     csv_file.writerow([element["name"]])
