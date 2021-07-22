@@ -1,0 +1,4 @@
+name,description,service_ports
+SVC-WEB,service web,"443 tcp, 80 tcp"
+SVC-BURP,service proxy,"8080 tcp, 8000 tcp"
+SVC-SSH,service ssh,22 tcp
