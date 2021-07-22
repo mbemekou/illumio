@@ -50,7 +50,7 @@ illumio core api
     active_rulesets
     draft_rulesets
     pairing_profiles
-    
+
     EXAMPLES:
     illumio-api init -f pce.tds.local -u api_183ab0757df31cf75 -s 0c8b09a6a35a51d0f12fdf960fd2b531970325c1e
     illumio-api get labels
@@ -74,9 +74,7 @@ illumio core api
     illumio-api create labels -f labels.csv
     
     csv file template for labels creation
-    
-    
-    ![image](https://user-images.githubusercontent.com/50032599/126615217-47a1c880-487f-45e4-9f62-bc8a44e8361a.png)
+   
     
 
     illumio-api create services -f services.csv
