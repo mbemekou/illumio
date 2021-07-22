@@ -41,8 +41,10 @@ illumio-api \<command\> \[options\]
 
     EXAMPLES:
     illumio-api init --fqdn pce.tds.local --port 8443 -api 2 ---org 1 --username api_183ab0757df31cf75 --secret 0c8b09a6a35a51d0f12fdf960fd2b531970325c1e
+    
+    or 
+    
     illumio-api init -f pce.tds.local  -u api_183ab0757df31cf75 -s 0c8b09a6a35a51d0f12fdf960fd2b531970325c1e
-  
 
     
     Most used options for 'get' command:
