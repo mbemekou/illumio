@@ -5,6 +5,8 @@ is a pythonic tool  that allows you to make api calls to illumio PCE with simpli
 
 Install with git
 
+![tab](ruleset_template.csv)
+
 
 git clone https://github.com/mbemekou/illumio.git
 
@@ -104,11 +106,11 @@ illumio-api \<command\> \[options\]
     illumio-api create rulesets -f rules.csv
     csv  file template for rulesets creation
     
-NAME,SCOPE,CONSUMER,PROVIDER,SERVICE,SECURE,EXTRASCOPE,UPDATE
-RS-A-AUTH|E-PROD|L-AWS,A-AUTH|E-PROD|L-AWS,R-WEB,R-APP,SVC-JAVA,no,no,no
-RS-A-AUTH|E-PROD|L-AWS,A-AUTH|E-PROD|L-AWS,R-DB,R-WEB,SVC-HTTP,no,no,yes
-RS-A-HRM|E-PCI|L-PAR,A-HRM|E-PCI|L-PAR,A-ACC|E-PROD,R-DB,SVC-BURP,yes,yes,no
 
+
+
+          
+          
 ![image](https://user-images.githubusercontent.com/50032599/126628174-d78010be-e0db-473f-a293-713bcb119de6.png)
 
     
