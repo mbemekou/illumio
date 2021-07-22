@@ -75,14 +75,15 @@ illumio core api
     
     csv file template for labels creation
     
+    
     ![image](https://user-images.githubusercontent.com/50032599/126615217-47a1c880-487f-45e4-9f62-bc8a44e8361a.png)
+    
 
     illumio-api create services -f services.csv
     
     csv file template for services creation
     
-    ![image](https://user-images.githubusercontent.com/50032599/126616327-af887f5e-4bab-4881-b7db-098491307134.png)
-
+    
     illumio-api create rules -f rules.csv
     
    
