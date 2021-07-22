@@ -1,9 +1,24 @@
 # illumio
 is a pythonic tool  that allows you to make api calls to illumio PCE with simplicity so that you can automate process.
 
+# Requirement: Python 3.9.2 or higher
 
- Usage: illumio-api <command> <options> 
-    
+Install with git
+
+
+git clone https://github.com/mbemekou/illumio.git
+
+cd illumio/
+
+pip3 install -r requirements.txt
+
+chmod +x illumio-api
+
+# Usage
+
+illumio-api \<command\> \[options\] 
+
+ 
     <command>:
     
     init - this command  setup illumio pce api parameters and then we can use others command without having to specify  parameters
