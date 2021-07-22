@@ -1,12 +1,12 @@
 # illumio
-illumio core api
+is a pythonic tool  that allows you to make api calls to illumio PCE with simplicity so that you can automate process.
 
 
- Usage: illumio-api <command> [options]
+ Usage: illumio-api <command> <options> 
     
     <command>:
     
-    init - this command allow us to setup illumio pce api parameters and then we can use others command without having to specify these parameters
+    init - this command  setup illumio pce api parameters and then we can use others command without having to specify  parameters
     
     get -  this command allow us to get objects through api to illumio pce and eventually to save in csv file
     
@@ -27,6 +27,7 @@ illumio core api
     EXAMPLES:
     illumio-api init --fqdn pce.tds.local --port 8443 -api 2 ---org 1 --username api_183ab0757df31cf75 --secret 0c8b09a6a35a51d0f12fdf960fd2b531970325c1e
     illumio-api init -f pce.tds.local  -u api_183ab0757df31cf75 -s 0c8b09a6a35a51d0f12fdf960fd2b531970325c1e
+  
 
     
     Most used options for 'get' command:
@@ -75,13 +76,19 @@ illumio core api
     
     csv file template for labels creation
    
-    
+![image](https://user-images.githubusercontent.com/50032599/126626587-af276e4a-dc07-4cc4-a7a7-4297a716b1aa.png)
+  
 
     illumio-api create services -f services.csv
     
     csv file template for services creation
+  ![image](https://user-images.githubusercontent.com/50032599/126625875-baa13001-ffa4-4e15-878d-015428dd6005.png)
+
     
     
-    illumio-api create rules -f rules.csv
+    illumio-api create rulesets -f rules.csv
+    csv  file template for rulesets creation
+![image](https://user-images.githubusercontent.com/50032599/126628174-d78010be-e0db-473f-a293-713bcb119de6.png)
+
     
    
