@@ -5,8 +5,6 @@ is a pythonic tool  that allows you to make api calls to illumio PCE with simpli
 
 Install with git
 
-![tab](ruleset_template.csv)
-
 
 git clone https://github.com/mbemekou/illumio.git
 
