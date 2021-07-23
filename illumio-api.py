@@ -115,7 +115,8 @@ def start():
                 csv_file=csv.writer(f,delimiter=";")
                 csv_file.writerow(["type","name"])
                 for element in json_lab:
-                    csv_file.writerow([element["key"],element["value"]])
+                    if(element["key"]!=None and element["value"]!=None):
+                        csv_file.writerow([element["key"],element["value"]])
             
 
 
@@ -127,7 +128,8 @@ def start():
                 csv_file=csv.writer(f,delimiter=";")
                 csv_file.writerow(["SERVICE","DESCRIPTION"])
                 for element in json_serv:
-                    csv_file.writerow([element["name"],element["description"]])
+                    if(element["name"]!=None and element["description"]!=None):
+                        csv_file.writerow([element["name"],element["description"]])
         if(args.object=="api_keys_collections"):
             print(ilo.get_api_key_collections())
         if(args.object=="authentication_settings"):    
