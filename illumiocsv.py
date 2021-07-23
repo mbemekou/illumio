@@ -10,10 +10,9 @@ class IloCsv(Ilo):
             l.append({"label":{"href":i}})
         return json.dumps(l, indent=4,sort_keys=True)
     def service_to_json(self,serv):
-        s=[]
-        for i in serv:
-            s.append({"href":i})
-        return json.dumps(s, indent=4, sort_keys=True)
+        
+        return json.dumps(serv)
+    
     def add_csv_label(self, csvfile):
         l=['app','loc','env','role']
         with open(csvfile,encoding="utf-8-sig") as f:
