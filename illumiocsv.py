@@ -17,7 +17,7 @@ class IloCsv(Ilo):
     def add_csv_label(self, csvfile):
         l=['app','loc','env','role']
         with open(csvfile,encoding="utf-8-sig") as f:
-            cfile=csv.DictReader(f, delimiter=",")
+            cfile=csv.DictReader(f, delimiter=";")
             for i in cfile:
                 data={}
                 if(i['type'] in l):
@@ -48,7 +48,7 @@ class IloCsv(Ilo):
         proto={"tcp":6,"udp":17,"icmp":1}
         
         with open(csvfile,encoding="utf-8-sig") as f:
-            cfile=csv.DictReader(f, delimiter=",")
+            cfile=csv.DictReader(f, delimiter=";")
             for i in cfile:
                 service_ports=[]
                 serv="""       
@@ -86,7 +86,7 @@ class IloCsv(Ilo):
     def add_csv_intra_ruleset(self, csvfile):
         r=[]
         with open(csvfile, encoding="utf-8-sig") as f:
-            cfile=csv.DictReader(f, delimiter=',')
+            cfile=csv.DictReader(f, delimiter=';')
             for i in  cfile:
                 name=i['NAME']
                 update="false"
