@@ -1,7 +1,7 @@
-type,name
-env,E-LAB
-loc,L-BAF
-loc,L-DSC
-app,A-BA
-loc,L-MAR
-role,R-ADM
+type;name
+env;E-LAB
+loc;L-BAF
+loc;L-DSC
+app;A-BA
+loc;L-MAR
+role;R-ADM
