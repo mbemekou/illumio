@@ -2,7 +2,6 @@
 from illumio import Ilo
 from illumiocsv import IloCsv
 import csv, json, argparse, sys,os
-import pandas as pd 
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 def get_object_type(s):
