@@ -111,7 +111,7 @@ def start():
             print(ilo.get_labels())
         if(args.object=="labels" and args.out!=None):
             json_lab=json.loads(ilo.get_labels())
-            with open(args.out, "w") as f:
+            with open(args.out, "w",newline='') as f:
                 csv_file=csv.writer(f,delimiter=";")
                 csv_file.writerow(["type","name"])
                 for element in json_lab:
@@ -124,12 +124,11 @@ def start():
             print(ilo.get_services())
         if(args.object=="services" and args.out!=None):
             json_serv=json.loads(ilo.get_services())
-            with open(args.out,"w") as f:
+            with open(args.out, "w",newline='') as f:
                 csv_file=csv.writer(f,delimiter=";")
-                csv_file.writerow(["SERVICE"])
+                csv_file.writerow(["SERVICE","DESCRIPTION"])
                 for element in json_serv:
-                    if(element["name"]!=None):
-                        csv_file.writerow([element["name"].strip('/n')])
+                        csv_file.writerow([element["name"], element["description"]])
         if(args.object=="api_keys_collections"):
             print(ilo.get_api_key_collections())
         if(args.object=="authentication_settings"):    
@@ -140,7 +139,7 @@ def start():
             print(ilo.get_pairing_profiles())
         if(args.object=="pairing_profiles" and args.out!=None):
 
-            with open(args.out, "w") as f:
+            with open(args.out, "w",newline='') as f:
                 f.write(ilo.pairing_profil_to_csv(json.loads(ilo.get_pairing_profiles())))
                 f.close()
         if(args.object=="active_rulesets"):
