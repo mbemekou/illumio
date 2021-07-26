@@ -126,10 +126,10 @@ def start():
             json_serv=json.loads(ilo.get_services())
             with open(args.out,"w") as f:
                 csv_file=csv.writer(f,delimiter=";")
-                csv_file.writerow(["SERVICE","DESCRIPTION"])
+                csv_file.writerow(["SERVICE"])
                 for element in json_serv:
-                    if(element["name"]!=None and element["description"]!=None):
-                        csv_file.writerow([element["name"],element["description"]])
+                    if(element["name"]!=None):
+                        csv_file.writerow([element["name"]])
         if(args.object=="api_keys_collections"):
             print(ilo.get_api_key_collections())
         if(args.object=="authentication_settings"):    
