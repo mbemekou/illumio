@@ -129,7 +129,7 @@ def start():
                 csv_file.writerow(["SERVICE"])
                 for element in json_serv:
                     print(element["name"])
-                    csv_file.writerow([element["name"]])
+                    csv_file.writerow([element["name"].strip()])
         if(args.object=="api_keys_collections"):
             print(ilo.get_api_key_collections())
         if(args.object=="authentication_settings"):    
