@@ -9,9 +9,14 @@ class IloCsv(Ilo):
         for i in lab:
             l.append({"label":{"href":i}})
         return json.dumps(l, indent=4,sort_keys=True)
-    def service_to_json(self,serv):
+    def service_to_json_svc(self,serv):
         
         return json.dumps(serv)
+    def service_to_json_rule(self,serv):
+        s=[]
+        for i in serv:
+            s.append({"href":i})
+        return json.dumps(s)
     
     def add_csv_label(self, csvfile):
         l=['app','loc','env','role']
@@ -76,7 +81,7 @@ class IloCsv(Ilo):
                     service_ports.append(p)
                 name=i['name']
                 description=i['description']
-                print(self.create_service(serv.replace("$name$",name).replace("$description$",description).replace("$service_ports$",self.service_to_json(service_ports))))
+                print(self.create_service(serv.replace("$name$",name).replace("$description$",description).replace("$service_ports$",self.service_to_json_svc(service_ports))))
 
 
 
@@ -94,7 +99,7 @@ class IloCsv(Ilo):
                 scope=self.label_to_json(self.return_label_href(i['SCOPE']))
                 consumer=self.label_to_json(self.return_label_href(i['CONSUMER']))
                 provider=self.label_to_json(self.return_label_href(i['PROVIDER']))
-                service=self.service_to_json(self.return_service_href(i['SERVICE']))
+                service=self.service_to_json_rule(self.return_service_href(i['SERVICE']))
                 if(i['EXTRASCOPE']=='yes' or i['EXTRASCOPE']=='true'):
                     extrascope="true"
             
