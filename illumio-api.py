@@ -149,7 +149,7 @@ def start():
         if(args.object=="draft_rulesets" and args.out!=None):
             json_rul=json.loads(ilo.get_draft_rulesets())
             with open(args.out,"w") as f:
-                csv_file=csv.writer(f,delimiter=";")
+                csv_file=csv.writer(f,delimiter=";",newline='')
                 csv_file.writerow(["RULENAME"])
                 for element in json_rul:
                     csv_file.writerow([element["name"]])
