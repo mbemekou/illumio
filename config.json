@@ -1,0 +1,10 @@
+{
+    "pce_qual":"https://url:9443/api/v2",
+    "orgs_qual":"/orgs/1",
+    "api_qual_user":"api_xxxxxx",
+    "api_qual_key":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "api_user":"api_yyyyyyy",
+    "api_key":"yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
+    "pce":"https://url:9443/api/v2",
+    "orgs":"/orgs/1"
+}
